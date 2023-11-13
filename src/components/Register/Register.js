@@ -40,7 +40,7 @@ const Register = ({ className, onSubmit }) => {
 
   const handleResponse = response => {
     response.error !== undefined
-      ? setError(response.error.message)
+      ? setError(response.error)
       : setMessage(response.message)
   }
   
