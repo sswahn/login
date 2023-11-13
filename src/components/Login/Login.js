@@ -75,3 +75,5 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
     </form>
   )
 }
+
+export default Login
