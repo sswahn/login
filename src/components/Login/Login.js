@@ -34,7 +34,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
       const request = {
         username: state.username,
         password: state.password,
-        remember: state.checked
+        remember: checked
       }
       const response = await onSubmit(request)
       handleResponse(response)
