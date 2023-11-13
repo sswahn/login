@@ -44,7 +44,7 @@
 
 .register div svg {
   left: 15px;
-  color: var(--dark-color);
+  color: white;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
