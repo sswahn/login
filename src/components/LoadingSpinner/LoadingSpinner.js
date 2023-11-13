@@ -1,22 +1,8 @@
+import styles from './styles.module.css'
+
 const LoadingSpinner = () => {
   return (
-    <svg className="spinner" fill="#000000" width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-      <style>
-        @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-        .spinner {
-          fill: #000000;
-          width: 50px;
-          height: 50px;
-          animation: spin .8s linear infinite;
-        }
-      </style>
+    <svg className={styles.spinner} fill="#000000" width="50px" height="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
       <path d="M25 18c-.6 0-1-.4-1-1V9c0-.6.4-1 1-1s1 .4 1 1v8c0 .6-.4 1-1 1z"/>
       <path opacity=".3" d="M25 42c-.6 0-1-.4-1-1v-8c0-.6.4-1 1-1s1 .4 1 1v8c0 .6-.4 1-1 1z"/>
       <path opacity=".3" d="M29 19c-.2 0-.3 0-.5-.1-.4-.3-.6-.8-.3-1.3l4-6.9c.3-.4.8-.6 1.3-.3.4.3.6.8.3 1.3l-4 6.9c-.2.2-.5.4-.8.4z"/>
@@ -32,4 +18,5 @@ const LoadingSpinner = () => {
     </svg>
   )
 }
+
 export default LoadingSpinner
