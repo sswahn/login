@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import UserIcon from '../Icons/UserIcon.js'
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
 
 const ForgotPassword = ({ className, onSubmit }) => {
   const [username, setUsername] = useState('')
@@ -44,7 +45,7 @@ const ForgotPassword = ({ className, onSubmit }) => {
         <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
         <UserIcon />
       </div>
-      {loading && <Loader />}
+      {loading && <LoadingSpinner />}
       {!loading && <SubmitButton text="Reset Password" message={message} error={error} />}
     </form>
   )
