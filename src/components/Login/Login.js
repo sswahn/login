@@ -21,23 +21,31 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
     setChecked(!checked)
   }
 
-  const handleResponse = response => {
-    if (responses.error !== undefined) {
-      setError(response.error)
+  const submitRequest = () => {
+    const request = {
+      username: state.username,
+      password: state.password,
+      remember: checked
     }
+    return onSubmit(request)
+  }
+  
+  const handleResponse = response => {
+    return new Promise((resolve, reject) => {
+      responses.error !== undefined)
+        ? reject(response.error)
+        : resolve(response.message)
+    )
   }
 
   const handleOnSubmit = event => {
     try {
       setLoading(true)
-      const request = {
-        username: state.username,
-        password: state.password,
-        remember: checked
-      }
-      const response = await onSubmit(request)
+      setError(undefined)
+      const response = await submitRequest()
       setLoading(false)
-      handleResponse(response)
+      const data = await handleResponse(response)
+      setMessage(data)
     } catch (err) {
       setError(err)
     }
