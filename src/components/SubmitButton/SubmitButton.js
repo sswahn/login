@@ -6,18 +6,18 @@ export default function SubmitButton({ text, message, error }) {
   return (
     <div>
       {message && (
-        <div className="submit-button-message">
+        <div className={styles.success}>
           <SuccessIcon />
           <span>{message}</span>
         </div>
       )}
       {error && (
-        <div className="submit-button-error">
+        <div className={styles.error}>
           <ErrorIcon />
           <span>{error}</span>
         </div>
       )}
-      <button className="submit-button" type="submit">{text}</button>
+      <button className={styles.submit} type="submit">{text}</button>
     </div>
   )
 }
