@@ -1,0 +1,24 @@
+/* Register css */
+
+.register {
+  background-color: #111; 
+  border: 1px solid #444;
+  border-radius: 10px; 
+  color: white;
+  max-width: 500px; 
+  padding: 10px 15px 50px 15px;
+  width: 100%; 
+}
+
+.register h2 {
+  font-size: 26px; 
+  font-weight: normal;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.register small {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
