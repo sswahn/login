@@ -96,7 +96,7 @@ const Register = ({ className, onSubmit }) => {
         <input id="hidden_field" type="hidden" onChange={handleOnChange} />
       </div>
       <details className="auth-details" aria-label="password requirements">
-        <summary>Password requirements</summary>
+        <summary aria-haspopup="true">Password requirements</summary>
         <ul>
           <li>Minimum length 8 characters.</li> 
           <li>Contains at least 1 number.</li>
