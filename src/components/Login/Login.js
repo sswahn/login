@@ -23,7 +23,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
 
   const handleResponse = response => {
     if (responses.error !== undefined) {
-      setError(response.error.message)
+      setError(response.error)
     }
   }
 
