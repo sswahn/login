@@ -39,9 +39,11 @@ const Register = ({ className, onSubmit }) => {
   }
 
   const handleResponse = response => {
-    response.error !== undefined
-      ? setError(response.error)
-      : setMessage(response.message)
+    return new Promise((resolve, reject) => 
+      response.error !== undefined
+        ? reject(response.error)
+        : resolve(response.message)
+    )
   }
   
   const handleOnSubmit = async event => {
@@ -52,7 +54,8 @@ const Register = ({ className, onSubmit }) => {
       setError(undefined)
       const response = await submitRequest()
       setLoading(false)
-      handleResponse(response)
+      const data = await handleResponse(response)
+      setMessage(data)
     } catch (err) {
       setError(err)
     }
