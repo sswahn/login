@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import UserIcon from '../Icons/UserIcon.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
+import styles from './styles.module.css'
 
 const ForgotPassword = ({ className, onSubmit }) => {
   const [username, setUsername] = useState('')
