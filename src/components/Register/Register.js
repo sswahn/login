@@ -77,19 +77,19 @@ const Register = ({ className, onSubmit }) => {
     <form className={`${styles.register} ${className || ''}`} onSubmit={handleOnSubmit} aria-label="registration form">
       <h2>Create an account</h2>
       <div>
-        <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" aria-label="username" aria-required="true" />
+        <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" aria-required="true" />
         <UserIcon />
       </div>
       <div>
-        <input id="email" type="email" onChange={handleOnChange} placeholder="Email" required minLength={7} maxLength={254} aria-label="email" aria-required="true"/>
+        <input id="email" type="email" onChange={handleOnChange} placeholder="Email" required minLength={7} maxLength={254} autoComplete="off" aria-label="email" aria-required="true"/>
         <EmailIcon />
       </div>
       <div>
-        <input id="password" type="password" onChange={handleOnChange} placeholder="Password" required minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" aria-label="password" aria-required="true" />
+        <input id="password" type="password" onChange={handleOnChange} placeholder="Password" required minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" autoComplete="off" aria-label="password" aria-required="true" />
         <PasswordIcon />
       </div>
       <div>
-        <input id="confirm_password" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" aria-label="confirm password" aria-required="true" />
+        <input id="confirm_password" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="off" aria-label="confirm password" aria-required="true" />
         <PasswordIcon />
       </div>
       <div>
