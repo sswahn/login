@@ -59,7 +59,7 @@ const Register = ({ className, onSubmit }) => {
       : setMessage(response.message)
   }
   
-  const handleSubmit = async event => {
+  const handleOnSubmit = async event => {
     event.preventDefault()
     try {
       await securityCheck()
@@ -74,7 +74,7 @@ const Register = ({ className, onSubmit }) => {
   }
   
   return (
-    <form className={`${styles.register} ${className || ''}`} onSubmit={handleSubmit} aria-label="registration form">
+    <form className={`${styles.register} ${className || ''}`} onSubmit={handleOnSubmit} aria-label="registration form">
       <h2>Create an account</h2>
       <div>
         <input type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" aria-label="username" aria-required="true" />
