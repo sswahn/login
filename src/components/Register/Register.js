@@ -11,28 +11,14 @@ const Register = ({ className, onSubmit }) => {
     username: '',
     email: '',
     password: '',
-    confirm_password: '',
-    hidden_field: '',
-    timer: undefined,
+    confirm_password: ''
   })
   const [message, setMessage] = useState(undefined)
   const [error, setError] = useState(undefined)
   const [loading, setLoading] = useState(false)
   
   const handleOnChange = ({ target }) => {
-    setState({ ...state, [target.id]: target.value, timer: state.timer ?? Date.now() })
-  }
-
-   const securityCheck = () => {
-    return new Promise((resolve, reject) => {
-      if (Date.now() - state.timer < 4000) {
-        reject('Form filled out too quickly. Bot secuirty triggered.')
-      }
-      if (state.hidden_field.length) {
-        reject('Unauthorized request.')
-      }
-      resolve()
-    })
+    setState({ ...state, [target.id]: target.value })
   }
   
   const validatePassword = () => {
@@ -62,7 +48,6 @@ const Register = ({ className, onSubmit }) => {
   const handleOnSubmit = async event => {
     event.preventDefault()
     try {
-      await securityCheck()
       await validatePassword()
       setLoading(true) 
       setError(undefined)
@@ -91,9 +76,6 @@ const Register = ({ className, onSubmit }) => {
       <div>
         <input id="confirm_password" type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" autoComplete="off" aria-label="confirm password" />
         <PasswordIcon />
-      </div>
-      <div>
-        <input id="hidden_field" type="hidden" onChange={handleOnChange} />
       </div>
       <details aria-label="password requirements">
         <summary aria-haspopup="true">Password requirements</summary>
