@@ -64,7 +64,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
       </div>
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
       {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Sign In" error={error} />}
+      {!loading && <SubmitButton text="Sign In" message={message} error={error} />}
       <div>
         <button className="auth-button" type="button" onClick={forgotPassword}>Forgot password?</button>
         <button className="auth-button" type="button" onClick={registerUser}>Create an account</button>
