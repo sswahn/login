@@ -77,19 +77,19 @@ const Register = ({ className, onSubmit }) => {
     <form className={`${styles.register} ${className || ''}`} onSubmit={handleSubmit} aria-label="registration form">
       <h2>Create an account</h2>
       <div>
-        <input type="text" onChange={handleOnChange} placeholder="Username" minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" />
+        <input type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" aria-label="username" aria-required="true" />
         <UserIcon />
       </div>
       <div>
-        <input type="email" onChange={handleOnChange} placeholder="Email" minLength={7} maxLength={254} />
+        <input type="email" onChange={handleOnChange} placeholder="Email" required minLength={7} maxLength={254} aria-label="email" aria-required="true"/>
         <EmailIcon />
       </div>
       <div>
-        <input type="password" onChange={handleOnChange} placeholder="Password" minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" />
+        <input type="password" onChange={handleOnChange} placeholder="Password" required minLength={8} maxLength={130} pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])(?=.*[a-z]).{8,}$" aria-label="password" aria-required="true" />
         <PasswordIcon />
       </div>
       <div>
-        <input type="password" onChange={handleOnChange} placeholder="Confirm Password" />
+        <input type="password" onChange={handleOnChange} required minLength={8} maxLength={130} placeholder="Confirm Password" aria-label="confirm password" aria-required="true" />
         <PasswordIcon />
       </div>
       <div>
