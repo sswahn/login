@@ -1,12 +1,12 @@
 /* Submit button css */
 
 .submit {
-  background-color: var(--dark-background-color-tertiary);
-  border-color: var(--dark-border-color);
+  background-color: #222;
+  border-color: #444;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  color: var(--dark-color);
+  color: white;
   font-size: 15px;
   font-weight: bold;
   margin: 15px 0;
@@ -17,7 +17,7 @@
 }
 
 .submit:hover {
-  background-color: var(--dark-background-color-quaternary);
+  background-color: #333;
 }
 
 .success {
