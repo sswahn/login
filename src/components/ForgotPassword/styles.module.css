@@ -1,0 +1,51 @@
+/* Forgot password css */
+
+.forgot {
+  background-color: #111; 
+  border: 1px solid #444;
+  border-radius: 10px; 
+  color: white;
+  max-width: 500px; 
+  padding: 10px 15px 50px 15px;
+  width: 100%; 
+}
+
+.forgot h2 {
+  font-size: 26px; 
+  font-weight: normal;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.forgot div {
+  position: relative;
+}
+
+.forgot div input {
+  background-color: #222;
+  border-color: #444;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  color: white;
+  font-size: 16px;
+  padding: 15px 15px 15px 37px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 100%;
+}
+
+.forgot input:hover {
+  border-color: white;
+}
+
+.forgot input:focus {
+  background-color: #333;
+}
+
+.forgot div svg {
+  left: 15px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
