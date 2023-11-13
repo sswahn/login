@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import SubmitButton from '../SubmitButton/SubmitButton.js'
 import UserIcon from '../Icons/UserIcon.js'
 import EmailIcon from '../Icons/EmailIcon.js'
 import PasswordIcon from '../Icons/PasswordIcon.js'
+import SubmitButton from '../SubmitButton/SubmitButton.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
 import styles from './styles.module.css'
 
