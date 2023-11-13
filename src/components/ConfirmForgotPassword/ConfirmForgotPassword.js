@@ -3,6 +3,7 @@ import UserIcon from '../Icons/UserIcon.js'
 import PasswordIcon from '../Icons/PasswordIcon.js'
 import SubmitButton from '../SubmitButton/SubmitButton.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
+import styles from './styles.module.css'
 
 const ConfirmForgotPassword = ({ className, onSubmit }) => {
   const [state, setState] = useState({
