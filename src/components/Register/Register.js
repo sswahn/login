@@ -39,7 +39,6 @@ const Register = ({ className, onSubmit }) => {
   }
 
   const handleResponse = response => {
-    setLoading(false)
     response.error !== undefined
       ? setError(response.error.message)
       : setMessage(response.message)
@@ -52,6 +51,7 @@ const Register = ({ className, onSubmit }) => {
       setLoading(true) 
       setError(undefined)
       const response = await submitRequest()
+      setLoading(false)
       handleResponse(response)
     } catch (err) {
       setError(err)
