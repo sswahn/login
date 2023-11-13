@@ -2,7 +2,9 @@ import { useState } from 'react'
 import UserIcon from '../Icons/UserIcon.js'
 import PasswordIcon from '../Icons/PasswordIcon.js'
 import Checkbox from '../Checkbox/Checkbox.js'
+import SubmitButton from '../SubmitButton/SubmitButton.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
+import styles from './styles.module.css'
 
 const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
   const [state, setState] = useState({ 
