@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import OpenEmailIcon from './OpenEmailIcon.js'
 import UserIcon from '../Icons/UserIcon.js'
 import PasswordIcon from '../Icons/PasswordIcon.js'
 import SubmitButton from '../SubmitButton/SubmitButton.js'
@@ -60,12 +61,12 @@ const ConfirmForgotPassword = ({ className, onSubmit }) => {
     }
   }
   
-  
   return (
     <form className={`${styles.confirm} ${className || ''}`} onSubmit={handleOnSubmit} aria-label="create new password form">
       <h2>Create a new password</h2>
       <div>
         <input id="confirmation_code" type="text" onChange={handleOnChange} placeholder="Confirmation code." required minLength={1} maxLength={255} autoComplete="off" aria-label="confirmation code" />
+        <OpenEmailIcon />
       </div>
       <div>
         <input id="username" type="text" onChange={handleOnChange} placeholder="Username" required minLength={2} maxLength={50} pattern="^(?!_)[a-zA-Z0-9_]{1,48}(?<!_)$" autoComplete="off" aria-label="username" />
