@@ -4,7 +4,7 @@ import PasswordIcon from '../Icons/PasswordIcon.js'
 import Checkbox from '../Checkbox/Checkbox.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
 
-const Login = ({ className, onSubmit }) => {
+const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
   const [state, setState] = useState({ 
     username: '',
     password: ''
@@ -57,9 +57,9 @@ const Login = ({ className, onSubmit }) => {
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
       {loading && <LoadingSpinner />}
       {!loading && <SubmitButton text="Sign In" error={error} />}
-      <div className="auth-actions">
-        <button className="auth-button" type="button" onClick={handleForgotPassword} aria-haspopup="dialog">Forgot password?</button>
-        <button className="auth-button" type="button" onClick={handleRegisterAccount} aria-haspopup="dialog">Create an account</button>
+      <div>
+        <button className="auth-button" type="button" onClick={forgotPassword}>Forgot password?</button>
+        <button className="auth-button" type="button" onClick={registerUser}>Create an account</button>
       </div>
     </form>
   )
