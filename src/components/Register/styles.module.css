@@ -17,8 +17,27 @@
   text-align: center;
 }
 
-.register small {
-  display: block;
+.register details {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 10px 0 5px 0;
+}
+
+.register details summary {
+  cursor: pointer;
   font-size: 12px;
   margin-bottom: 5px;
 }
+
+.register details ul {
+  list-style-type: none;
+}
+
+.register details ul li {
+  margin-left: 12px;
+}
+
+.register details ul li:last-of-type {
+  margin-bottom: 10px;
+}
+
