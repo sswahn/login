@@ -35,7 +35,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
       responses.error !== undefined)
         ? reject(response.error)
         : resolve(response.message)
-    )
+    })
   }
 
   const handleOnSubmit = event => {
