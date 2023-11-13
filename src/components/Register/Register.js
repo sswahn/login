@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import SubmitButton from '../SubmitButton/SubmitButton.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
-import UserIcon from './UserIcon.js'
-import EmailIcon from './EmailIcon.js'
-import PasswordIcon from './PasswordIcon.js'
+import UserIcon from '../Icons/UserIcon.js'
+import EmailIcon from '../Icons/EmailIcon.js'
+import PasswordIcon from '../Icons/PasswordIcon.js'
 import styles from './styles.module.css'
 
 const Register = ({ className, onSubmit }) => {
