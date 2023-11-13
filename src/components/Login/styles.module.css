@@ -1,10 +1,11 @@
 /* Login css */
 
 .login {
-  background-color: #111; 
-  border: 1px solid #444;
+  background-color: white; 
+  border: 1px solid #555;
   border-radius: 10px; 
-  color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 500px; 
   padding: 10px 15px 50px 15px;
   width: 100%; 
@@ -22,32 +23,34 @@
 }
 
 .login div input {
-  background-color: #222;
-  border-color: #444;
+  border: 1px solid #555;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  color: white;
+  box-sizing: border-box;
+  color: black;
   font-size: 16px;
+  margin-bottom: 20px;
   padding: 15px 15px 15px 37px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   width: 100%;
 }
 
 .login input:hover {
-  border-color: white;
+  border-color: black;
 }
 
 .login input:focus {
-  background-color: #333;
+  background-color: #eee;
 }
 
-.login div svg {
+.login:first-child > svg,
+.login div svg:nth-child(2) {
+  font-size: 20px;
   left: 15px;
-  color: white;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 38%;
+  transform: translateY(-60%);
 }
 
 .login div:last-child { 
@@ -56,3 +59,16 @@
   margin-top: 5px;
   padding: 0 15px;
 }
+
+.login div:last-child button { 
+  background: none;
+  cursor: pointer;
+  border: 0;
+  font-size: 16px;
+  padding: 0;
+}
+
+.login div:last-child button:hover {
+  text-decoration: underline;
+}
+    
