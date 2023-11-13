@@ -1,18 +1,18 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleCheck, faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
+import SuccessIcon from './SuccessIcon.js'
+import ErrorIcon from './ErrorIcon.js'
 
 export default function SubmitButton({ text, message, error }) {
   return (
     <div>
       {message && (
         <div className="submit-button-message">
-          <FontAwesomeIcon icon={faCircleCheck} />
+          <SuccessIcon />
           <span>{message}</span>
         </div>
       )}
       {error && (
         <div className="submit-button-error">
-          <FontAwesomeIcon icon={faCircleExclamation} />
+          <ErrorIcon />
           <span>{error}</span>
         </div>
       )}
