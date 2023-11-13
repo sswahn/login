@@ -10,8 +10,9 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
     password: ''
   })
   const [checked, setChecked] = useState(true)
-  const [loading, setLoading] = useState(false)
+  const [message, setMessage] = useState(undefined)
   const [error, setError] = useState(undefined)
+  const [loading, setLoading] = useState(false)
   
   const handleOnChange = ({ target }) => {
     setState({ ...state, [target.id]: target.value })
