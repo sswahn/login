@@ -29,7 +29,7 @@ const Register = ({ className, onSubmit }) => {
     )
   }
 
-  const submitRequest = async () => {
+  const submitRequest = () => {
     const request = {
       username: state.username,
       email: state.email,
