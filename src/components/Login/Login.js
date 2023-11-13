@@ -22,7 +22,6 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
   }
 
   const handleResponse = response => {
-    setLoading(false)
     if (responses.error !== undefined) {
       setError(response.error.message)
     }
@@ -37,6 +36,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
         remember: checked
       }
       const response = await onSubmit(request)
+      setLoading(false)
       handleResponse(response)
     } catch (err) {
       setError(err)
