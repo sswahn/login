@@ -1,5 +1,6 @@
 import SuccessIcon from './SuccessIcon.js'
 import ErrorIcon from './ErrorIcon.js'
+import styles from './styles.module.css'
 
 export default function SubmitButton({ text, message, error }) {
   return (
