@@ -22,11 +22,11 @@ const Register = ({ className, onSubmit }) => {
   }
   
   const validatePassword = () => {
-    return new Promise((resolve, reject) =>
+    return new Promise((resolve, reject) => {
       state.password !== state.confirm_password
         ? reject('Passwords do not match.')
         : resolve()
-    )
+    })
   }
 
   const submitRequest = () => {
@@ -39,11 +39,11 @@ const Register = ({ className, onSubmit }) => {
   }
 
   const handleResponse = response => {
-    return new Promise((resolve, reject) => 
+    return new Promise((resolve, reject) => {
       response.error !== undefined
         ? reject(response.error)
         : resolve(response.message)
-    )
+    })
   }
   
   const handleOnSubmit = async event => {
