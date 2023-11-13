@@ -41,7 +41,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
     })
   }
 
-  const handleOnSubmit = event => {
+  const handleOnSubmit = async event => {
     try {
       setLoading(true)
       setError(undefined)
