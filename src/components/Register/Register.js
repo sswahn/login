@@ -1,44 +1,141 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import SubmitButton from '../SubmitButton/SubmitButton.js'
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner.js'
+import UserIcon from './UserIcon.js'
+import EmailIcon from './EmailIcon.js'
+import PasswordIcon from './PasswordIcon.js'
 import styles from './styles.module.css'
 
-const Register = ({ className }) => {
+const Register = ({ className, onSubmit, turnstile }) => {
+  const [state, setState] = useState({ 
+    username: '',
+    email: '',
+    password: '',
+    confirm_password: '',
+    hidden_field: '',
+    timer: undefined,
+  })
   const [message, setMessage] = useState(undefined)
   const [error, setError] = useState(undefined)
   const [loading, setLoading] = useState(false)
+  const dialogRef = useRef(null)
+
+  const { endpoint, component: Turnstile } = turnstile || {}
+  
+  const handleOnChange = ({ target }) => {
+    setState({ ...state, [target.id]: target.value, timer: state.timer ?? Date.now() })
+  }
+
+   const securityCheck = () => {
+    return new Promise((resolve, reject) => {
+      if (Date.now() - state.timer < 4000) {
+        reject('Form filled out too quickly. Bot secuirty triggered.')
+      }
+      if (state.hidden_field.length) {
+        reject('Unauthorized request.')
+      }
+      resolve()
+    })
+  }
+  
+  const validatePassword = () => {
+    return new Promise((resolve, reject) =>
+      state.password !== state.confirm_password
+        ? reject('Passwords do not match.')
+        : resolve()
+    )
+  }
+
+  const handleResponse = response => {
+    setLoading(false)
+    response.error !== undefined
+      ? setError(response.error.message)
+      : setMessage(response.message)
+  }
+
+  const postRequest = async () => {
+    try {
+      const request = {
+        username: state.username,
+        email: state.email,
+        password: state.password
+      }
+      const response = await onSubmit(request)
+      handleResponse(response)
+    } catch (err) {
+      setError(err)
+    }
+  }
+  
+  const verifyTurnstile = async value => {
+    if (message || error) {
+      return
+    }
+    try {
+      const request = {
+        turnstile: value
+      }
+      await postAnon(endpoint, request)
+      dialogRef.current.close()
+      postRequest()
+    } catch (err) {
+      setError(err)
+    }
+  }
+  
+  const handleSubmit = async event => {
+    event.preventDefault()
+    try {
+      await securityCheck()
+      await validatePassword()
+      setLoading(true) 
+      setError(undefined)
+      dialogRef.current.showModal()
+    } catch (err) {
+      setError(err)
+    }
+  }
   
   return (
-    <form className={`${styles.register} ${className || ''}`} onSubmit={handleSubmit} aria-label="registration form">
-      <div>
-        <input type="text" onChange={handleOnChange} placeholder="Username" />
-        <UserIcon />
-      </div>
-      <div>
-        <input type="email" onChange={handleOnChange} placeholder="Email" />
-        <EmailIcon />
-      </div>
-      <div>
-        <input type="password" onChange={handleOnChange} placeholder="Password" />
-        <PasswordIcon />
-      </div>
-      <div>
-        <input type="password" onChange={handleOnChange} placeholder="Confirm Password" />
-        <PasswordIcon />
-      </div>
-      <details className="auth-details" aria-label="password requirements">
-        <summary>Password requirements</summary>
-        <ul>
-          <li>Minimum length 8 characters.</li> 
-          <li>Contains at least 1 number.</li>
-          <li>Contains at least 1 special character.</li>
-          <li>Contains at least 1 uppercase letter.</li>
-          <li>Contains at least 1 lowercase letter.</li>
-        </ul>
-      </details>
-      {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Sign Up" message={message} error={error} />}
-    </form>
+    <>
+      <dialog ref={dialogRef} aria-label="turnstile verification">
+        {dialogRef.current?.open && <Turnstile onVerify={verifyTurnstile} />}
+      </dialog>
+      <form className={`${styles.register} ${className || ''}`} onSubmit={handleSubmit} aria-label="registration form">
+        <h2>Create an account</h2>
+        <div>
+          <input type="text" onChange={handleOnChange} placeholder="Username" />
+          <UserIcon />
+        </div>
+        <div>
+          <input type="email" onChange={handleOnChange} placeholder="Email" />
+          <EmailIcon />
+        </div>
+        <div>
+          <input type="password" onChange={handleOnChange} placeholder="Password" />
+          <PasswordIcon />
+        </div>
+        <div>
+          <input type="password" onChange={handleOnChange} placeholder="Confirm Password" />
+          <PasswordIcon />
+        </div>
+        <div>
+          <input id="hidden_field" type="hidden" onChange={handleOnChange} />
+        </div>
+        <details className="auth-details" aria-label="password requirements">
+          <summary>Password requirements</summary>
+          <ul>
+            <li>Minimum length 8 characters.</li> 
+            <li>Contains at least 1 number.</li>
+            <li>Contains at least 1 special character.</li>
+            <li>Contains at least 1 uppercase letter.</li>
+            <li>Contains at least 1 lowercase letter.</li>
+          </ul>
+        </details>
+        {loading && <LoadingSpinner />}
+        {!loading && <SubmitButton text="Sign Up" message={message} error={error} />}
+      </form>
+    </>
   )
 }
 
