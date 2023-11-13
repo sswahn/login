@@ -1,0 +1,8 @@
+
+
+.login div:last-child { 
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 0 15px;
+}
