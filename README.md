@@ -89,5 +89,8 @@ This library uses Font Awesome Icons.
   - Icons used under the [Font Awesome Free License](https://fontawesome.com/license/free).
 
 
+## Related
+- [@sswahn/cognito](https://www.npmjs.com/package/@sswahn/cognito): Cognito is a robust AWS Cognito login system tailored for Node.js applications. It offers a comprehensive set of features to streamline user registration, authentication, and password management securely.  
+
 ## License
 Login is [MIT Licensed](https://github.com/sswahn/login/blob/main/LICENSE)
