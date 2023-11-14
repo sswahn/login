@@ -81,7 +81,7 @@ In the above example, the custom-login class will be applied to the Login compon
 ## Peer Dependencies
 Login requires React as a peer dependency. You should have React installed in your project with a version compatible with this library.  
 
-[React](https://reactjs.org/): ^18.2.0  
+- [React](https://reactjs.org/): ^18.2.0  
 
 ## Credits
 This library uses Font Awesome Icons.
