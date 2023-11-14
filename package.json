@@ -1,6 +1,6 @@
 {
   "name": "@sswahn/login",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "license": "MIT",
   "description": "A versatile authentication library designed to streamline the user authentication processes for React applications. This library provides components for user registration, login, password reset, and more.",
   "main": "src/index.js",
