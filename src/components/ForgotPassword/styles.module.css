@@ -22,11 +22,9 @@
   position: relative;
 }
 
-.forgot div input {
+.forgot input {
   border: 1px solid #555;
   border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
   box-sizing: border-box;
   color: black;
   font-size: 16px;
@@ -44,7 +42,7 @@
   background-color: #eee;
 }
 
-.forgot div svg {
+.forgot svg {
   font-size: 20px;
   left: 15px;
   position: absolute;
