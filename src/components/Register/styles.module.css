@@ -22,14 +22,24 @@
   position: relative;
 }
 
+.register > div:first-of-type,
+.register > div:nth-of-type(2),
+.register > div:nth-of-type(3),
+.register > div:nth-of-type(4) {
+  margin-bottom: 20px;
+}
+
+.register div:nth-of-type(4) {
+  margin-bottom: 15px;
+}
+
 .register input {
   border: 1px solid #555;
   border-radius: 5px;
   box-sizing: border-box;
   color: black;
   font-size: 16px;
-  margin-bottom: 20px;
-  padding: 15px 15px 15px 40px;
+  padding: 15px 15px 15px 37px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   width: 100%;
 }
@@ -38,16 +48,12 @@
   border-color: black;
 }
 
-.register div:nth-of-type(4) input {
-  margin-bottom: 10px;
-}
-
 .register svg {
   font-size: 20px;
   left: 15px;
   position: absolute;
-  top: 38%;
-  transform: translateY(-60%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .register details {
