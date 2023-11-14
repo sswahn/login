@@ -52,3 +52,5 @@ const ForgotPassword = ({ className, onSubmit }) => {
     </form>
   )
 }
+
+export default ForgotPassword
