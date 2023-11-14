@@ -7,6 +7,7 @@ A versatile React authentication library designed to streamline user authenticat
 - User login with optional "Remember Me" functionality.
 - Forgot password functionality with email confirmation.
 - Password reset using confirmation code.
+- Error and Success message alerts
   
 ## Installation
 Using npm.
@@ -62,7 +63,12 @@ import {
 ## Documentation
 
 ### `onSubmit` Callback Hook
-Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be a callback function. This function is triggered when the user submits the form, and it receives the form data as an argument. You can customize this function to handle the form submission, such as making API calls, additional validation, etc.
+Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be a callback function. This function is triggered when the user submits the form, and it receives the form data as an argument. You can customize this function to handle the form submission, such as making API calls, additional validation, etc. `onSubmit` must be an async function that returns one of the following objects:
+```javascript
+{ message: 'Your success message.' }
+// or
+{ error: 'Your error message.' }
+```
 
 ### Styling Overrides with className
 You can customize the appearance of each component by providing a className prop. This allows you to apply your own styles to the component. For example:
