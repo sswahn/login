@@ -1,10 +1,11 @@
 /* Forgot password css */
 
 .forgot {
-  background-color: #111; 
-  border: 1px solid #444;
+  background-color: white; 
+  border: 1px solid #555;
   border-radius: 10px; 
-  color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 500px; 
   padding: 10px 15px 50px 15px;
   width: 100%; 
@@ -22,30 +23,31 @@
 }
 
 .forgot div input {
-  background-color: #222;
-  border-color: #444;
+  border: 1px solid #555;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  color: white;
+  box-sizing: border-box;
+  color: black;
   font-size: 16px;
+  margin-bottom: 20px;
   padding: 15px 15px 15px 37px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   width: 100%;
 }
 
 .forgot input:hover {
-  border-color: white;
+  border-color: black;
 }
 
 .forgot input:focus {
-  background-color: #333;
+  background-color: #eee;
 }
 
 .forgot div svg {
+  font-size: 20px;
   left: 15px;
-  color: white;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 38%;
+  transform: translateY(-60%);
 }
