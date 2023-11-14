@@ -1,0 +1,22 @@
+{
+  "name": "@sswahn/login",
+  "version": "1.0.0-beta.0",
+  "license": "MIT",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "keywords": [
+    "login",
+    "components",
+    "custom",
+    "login system",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sswahn/login"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
