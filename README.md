@@ -1,12 +1,12 @@
 # Login · [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/sswahn/login/blob/main/LICENSE) ![npm version](https://img.shields.io/npm/v/@sswahn/login) ![Weekly Downloads](https://img.shields.io/npm/dw/@sswahn/login)
 
-A versatile and secure React authentication library designed to streamline user authentication processes in your React applications. This library provides components for user registration, login, password reset, and more.
+A versatile React authentication library designed to streamline user authentication processes in your React applications. This library provides components for user registration, login, password reset, and more.
 
 ## Features
 - Seamless user registration with robust validation.
-- Secure user login with optional "Remember Me" functionality.
+- User login with optional "Remember Me" functionality.
 - Forgot password functionality with email confirmation.
-- Secure password reset with confirmation code.
+- Secure password reset using confirmation code.
   
 ## Installation
 Using npm.
