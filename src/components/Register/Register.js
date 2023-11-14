@@ -45,6 +45,12 @@ const Register = ({ className, onSubmit }) => {
         : resolve(response.message)
     })
   }
+
+  const displayMessage = message => {
+    if (message) {
+      setMessage(message)
+    }
+  }
   
   const handleOnSubmit = async event => {
     event.preventDefault()
@@ -55,7 +61,7 @@ const Register = ({ className, onSubmit }) => {
       const response = await submitRequest()
       setLoading(false)
       const data = await handleResponse(response)
-      setMessage(data)
+      displayMessage(data)
     } catch (err) {
       setError(err)
     }
