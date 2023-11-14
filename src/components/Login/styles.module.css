@@ -1,10 +1,9 @@
 /* Login css */
 
 .login {
-  background-color: white; 
+  background: white; 
   border: 1px solid #555;
   border-radius: 10px; 
-  color: black;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 500px; 
   padding: 10px 15px 50px 15px;
@@ -12,6 +11,7 @@
 }
 
 .login h2 {
+  color: black;
   font-size: 26px; 
   font-weight: normal;
   margin: 15px 0;
@@ -22,13 +22,17 @@
   position: relative;
 }
 
+.login > div:first-of-type,
+.login > div:nth-of-type(2) {
+  margin-bottom: 20px;
+}
+
 .login input {
   border: 1px solid #555;
   border-radius: 5px;
   box-sizing: border-box;
   color: black;
   font-size: 16px;
-  margin-bottom: 20px;
   padding: 15px 15px 15px 40px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   width: 100%;
@@ -38,13 +42,12 @@
   border-color: black;
 }
 
-/* select first two svg elements */
-.login svg:nth-child(-n+2) {
+.login svg {  /* shouldnt set global svg, should set specific to the inputs and the others, checkbox, alerts, spinner, etc. should handle themselves */
   font-size: 20px;
   left: 15px;
   position: absolute;
-  top: 38%;
-  transform: translateY(-60%);
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .login div:last-child { 
@@ -56,6 +59,7 @@
 
 .login div:last-child button { 
   background: none;
+  color: black;
   cursor: pointer;
   border: 0;
   font-size: 16px;
@@ -65,4 +69,3 @@
 .login div:last-child button:hover {
   text-decoration: underline;
 }
-    
