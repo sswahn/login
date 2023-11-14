@@ -62,7 +62,7 @@ import {
 ## Documentation
 
 ### `onSubmit` Callback Hook
-Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be a callback function. This function is triggered when the user submits the form, and it receives the form data as an argument. You can customize this function to handle the form submission, such as making API calls, validating data, etc.
+Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be a callback function. This function is triggered when the user submits the form, and it receives the form data as an argument. You can customize this function to handle the form submission, such as making API calls, additional validation, etc.
 
 ### Styling Overrides with className
 You can customize the appearance of each component by providing a className prop. This allows you to apply your own styles to the component. For example:
@@ -71,7 +71,7 @@ const CustomLogin = () => {
   return <Login className="custom-login" onSubmit={handleLogin} />
 }
 ```
-In the above example, the custom-login class will be applied to the Login component, allowing you to override default styles.
+In the above example, the "custom-login" class will be applied to the Login component, allowing you to override default styles.
 
 ### Additional Callbacks in Login
 - `forgotPassword`: Callback triggered when the user clicks the "Forgot password?" link. Use this to handle opening the forgot password form.
