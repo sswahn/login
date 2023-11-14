@@ -22,11 +22,9 @@
   position: relative;
 }
 
-.confirm div input {
+.confirm input {
   border: 1px solid #555;
   border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
   box-sizing: border-box;
   color: black;
   font-size: 16px;
@@ -40,11 +38,7 @@
   border-color: black;
 }
 
-.confirm input:focus {
-  background-color: #eee;
-}
-
-.confirm div svg {
+.confirm svg {
   font-size: 20px;
   left: 15px;
   position: absolute;
