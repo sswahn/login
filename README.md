@@ -6,7 +6,7 @@ A versatile React authentication library designed to streamline user authenticat
 - Seamless user registration with robust validation.
 - User login with optional "Remember Me" functionality.
 - Forgot password functionality with email confirmation.
-- Secure password reset using confirmation code.
+- Password reset using confirmation code.
   
 ## Installation
 Using npm.
