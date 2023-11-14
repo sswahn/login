@@ -85,3 +85,5 @@ const ConfirmForgotPassword = ({ className, onSubmit }) => {
     </form>
   )
 }
+
+export default ConfirmForgotPassword
