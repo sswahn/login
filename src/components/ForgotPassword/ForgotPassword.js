@@ -28,6 +28,7 @@ const ForgotPassword = ({ className, onSubmit }) => {
   }
   
   const handleOnSubmit = async () => {
+    event.preventDefault()
     try {
       setLoading(true) 
       setError(undefined)
