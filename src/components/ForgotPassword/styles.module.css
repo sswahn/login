@@ -22,13 +22,16 @@
   position: relative;
 }
 
+.forgot > div:first-of-type {
+  margin-bottom: 15px;
+}
+
 .forgot input {
   border: 1px solid #555;
   border-radius: 5px;
   box-sizing: border-box;
   color: black;
   font-size: 16px;
-  margin-bottom: 20px;
   padding: 15px 15px 15px 40px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   width: 100%;
@@ -42,6 +45,6 @@
   font-size: 20px;
   left: 15px;
   position: absolute;
-  top: 38%;
-  transform: translateY(-60%);
+  top: 50%;
+  transform: translateY(-50%);
 }
