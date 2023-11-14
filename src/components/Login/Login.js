@@ -69,8 +69,8 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
       {loading && <LoadingSpinner />}
       {!loading && <SubmitButton text="Sign In" message={message} error={error} />}
       <div>
-        <button className="auth-button" type="button" onClick={forgotPassword}>Forgot password?</button>
-        <button className="auth-button" type="button" onClick={registerUser}>Create an account</button>
+        <button type="button" onClick={forgotPassword} aria-label="open forgot password form">Forgot password?</button>
+        <button type="button" onClick={registerUser} aria-label="open registration form">Create an account</button>
       </div>
     </form>
   )
