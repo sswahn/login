@@ -22,11 +22,9 @@
   position: relative;
 }
 
-.register div input {
+.register input {
   border: 1px solid #555;
   border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
   box-sizing: border-box;
   color: black;
   font-size: 16px;
@@ -34,10 +32,6 @@
   padding: 15px 15px 15px 37px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   width: 100%;
-}
-
-.register > div:nth-of-type(4) input {
-  margin-bottom: 10px;
 }
 
 .register input:hover {
@@ -48,7 +42,11 @@
   background-color: #eee;
 }
 
-.register div svg {
+.register div:nth-of-type(4) input {
+  margin-bottom: 10px;
+}
+
+.register svg {
   font-size: 20px;
   left: 15px;
   position: absolute;
@@ -62,18 +60,18 @@
   margin-top: 5px;
 }
 
-.register details summary {
+.register summary {
   cursor: pointer;
   font-size: 12px;
   width: 160px;
 }
 
-.register details ul {
+.register ul {
   list-style-type: none;
   padding-left: 0;
   margin: 5px 0 0 0;
 }
 
-.register details ul li {
+.register li {
   margin-left: 12px;
 }
