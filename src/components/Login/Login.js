@@ -42,6 +42,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
   }
 
   const handleOnSubmit = async event => {
+    event.preventDefault()
     try {
       setLoading(true)
       setError(undefined)
