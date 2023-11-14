@@ -1,4 +1,5 @@
-# Login · [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/sswahn/login/blob/main/LICENSE) ![npm version](https://img.shields.io/npm/v/@sswahn/login) ![Weekly Downloads](https://img.shields.io/npm/dw/@sswahn/login)
+# Login · [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/sswahn/login/blob/main/LICENSE) ![npm version](https://img.shields.io/npm/v/@sswahn/login) 
+<!-- ![Weekly Downloads](https://img.shields.io/npm/dw/@sswahn/login) -->
 
 A versatile authentication library designed to streamline user authentication processes in your React applications. This library provides components for user registration, login, password reset, and more.
 
