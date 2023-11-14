@@ -92,7 +92,7 @@ This library uses Font Awesome Icons.
 ## Related
 - [@sswahn/cognito](https://www.npmjs.com/package/@sswahn/cognito): Cognito is a robust AWS Cognito login system for Node.js.
 - [@sswahn/session](https://www.npmjs.com/package/@sswahn/session): This library provides a simple and efficient way to manage user sessions using AWS Cognito for authentication.
-- [@sswahn/authorizer](https://www.npmjs.com/package/@sswahn/authorizer): An AWS Cognito authorizer for APIGateway that uses HTTP Cookies.
+- [@sswahn/authorizer](https://www.npmjs.com/package/@sswahn/authorizer): An AWS Cognito authorizer for APIGateway that uses **HTTP Cookies**.
 
 
 ## License
