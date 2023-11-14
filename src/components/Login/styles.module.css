@@ -38,10 +38,6 @@
   border-color: black;
 }
 
-.login input:focus {
-  background-color: #eee;
-}
-
 /* select first two svg elements */
 .login svg:nth-child(-n+2) {
   font-size: 20px;
