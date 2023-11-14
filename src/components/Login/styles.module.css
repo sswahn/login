@@ -42,7 +42,7 @@
   border-color: black;
 }
 
-.login svg {  /* shouldnt set global svg, should set specific to the inputs and the others, checkbox, alerts, spinner, etc. should handle themselves */
+.login svg { 
   font-size: 20px;
   left: 15px;
   position: absolute;
@@ -69,3 +69,4 @@
 .login div:last-child button:hover {
   text-decoration: underline;
 }
+    
