@@ -73,11 +73,11 @@ Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) 
 ### Styling Overrides with className
 You can customize the appearance of each component by providing a className prop. This allows you to apply your own styles to the component. For example:
 ```javascript
-const CustomLogin = () => {
-  return <Login className="custom-login" onSubmit={handleLogin} />
+const CustomRegister = () => {
+  return <Register className="custom-register" onSubmit={handleRegister} />
 }
 ```
-In the above example, the "custom-login" class will be applied to the Login component, allowing you to override default styles.
+In the above example, the "custom-register" class will be applied to the Register component, allowing you to override default styles.
 
 ### Additional Callbacks in Login
 - `forgotPassword`: Callback triggered when the user clicks the "Forgot password?" link. Use this to handle opening the forgot password form.
