@@ -28,7 +28,12 @@
 }
 
 .success span {
-  margin-left: 15px;
+  color: white;
+  margin-left: 25px;
+}
+
+.success path {
+  fill: white;
 }
 
 .error {
@@ -41,5 +46,10 @@
 }
 
 .error span {
-  margin-left: 15px;
+  color: white;
+  margin-left: 25px;
+}
+
+.error path {
+  fill: white;
 }
