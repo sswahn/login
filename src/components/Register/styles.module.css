@@ -38,10 +38,6 @@
   border-color: black;
 }
 
-.register input:focus {
-  background-color: #eee;
-}
-
 .register div:nth-of-type(4) input {
   margin-bottom: 10px;
 }
