@@ -63,7 +63,7 @@ import {
 ## Documentation
 
 ### `onSubmit` Callback Hook
-Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be a callback function. This function is triggered when the user submits the form, and it receives the form data as an argument. You can customize this function to handle the form submission, such as making API calls, additional validation, etc. `onSubmit` must be an async function that returns one of the following objects:
+Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be a asynchronous callback function. This function is triggered when the user submits the form, and it receives the form data as an argument. You can customize this function to handle the form submission, such as making API calls, additional validation, etc. `onSubmit` must be an async function and return one of the following objects:
 ```javascript
 { message: 'Your success message.' }
 // or
