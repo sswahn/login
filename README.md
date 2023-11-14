@@ -27,6 +27,7 @@ import {
 ```
 
 ### Register
+Creates a user registration form.
 ```javascript
 <Register
   className="custom-register"
@@ -35,6 +36,7 @@ import {
 ```  
 
 ### Login
+Creates a user login form, with links to registration, and forgot password forms.
 ```javascript
 <Login
   className="custom-login"
@@ -45,6 +47,7 @@ import {
 ```  
 
 ### Forgot Password
+Forgot password form, for requesting a password reset.
 ```javascript
 <ForgotPassword
   className="custom-forgot-password"
@@ -53,6 +56,7 @@ import {
 ```  
 
 ### Confirm Forgot Password
+Confirm forgot password form. Using a confirmation code users can reset their passwords.
 ```javascript
 <ConfirmForgotPassword
   className="custom-confirm-forgot-password"
