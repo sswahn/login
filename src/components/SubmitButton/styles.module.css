@@ -21,6 +21,7 @@
 .success {
   background-color: green;
   border-radius: 4px;
+  box-sizing: border-box;
   margin: 20px 0 0 0;
   padding: 15px;
   width: 100%;
@@ -33,6 +34,7 @@
 .error {
   background-color: red;
   border-radius: 4px;
+  box-sizing: border-box;
   margin: 20px 0 0 0;
   padding: 15px;
   width: 100%;
