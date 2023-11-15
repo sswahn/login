@@ -20,9 +20,9 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
     setState({ ...state, [target.id]: target.value })
   }
 
-  const handleCheckbox = event => {
-    setChecked(!checked)
-  }
+  const handleCheckbox = useCallback(event => {
+    setChecked(prevChecked => !prevChecked)
+  }, [setChecked])
 
   const submitRequest = () => {
     const request = {
