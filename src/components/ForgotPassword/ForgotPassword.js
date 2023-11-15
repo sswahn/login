@@ -26,9 +26,8 @@ const ForgotPassword = ({ className, onSubmit }) => {
       }
       if (response.error !== undefined) { 
         reject(response.error) 
-      } else {
-        resolve(response.message)
       }
+      resolve(response.message)
     })
   }
 
