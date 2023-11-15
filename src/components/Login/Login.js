@@ -41,6 +41,12 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
     })
   }
 
+  const displayMessage = message => {
+    if (message) {
+      setMessage(message)
+    }
+  }
+
   const handleOnSubmit = async event => {
     event.preventDefault()
     try {
@@ -49,7 +55,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
       const response = await submitRequest()
       setLoading(false)
       const data = await handleResponse(response)
-      setMessage(data)
+      displayMessage(data)
     } catch (err) {
       setError(err)
     }
