@@ -1,8 +1,9 @@
+import { memo } from 'react'
 import SuccessIcon from './SuccessIcon.js'
 import ErrorIcon from './ErrorIcon.js'
 import styles from './styles.module.css'
 
-const SubmitButton = ({ text, message, error }) => {
+const SubmitButton = memo(({ text, message, error }) => {
   return (
     <div>
       {message && (
@@ -20,6 +21,6 @@ const SubmitButton = ({ text, message, error }) => {
       <button className={styles.submit} type="submit">{text}</button>
     </div>
   )
-}
+})
 
 export default SubmitButton
