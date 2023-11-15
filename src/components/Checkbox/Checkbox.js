@@ -1,9 +1,9 @@
-import { useRef } from 'react'
+import { useRef, memo } from 'react'
 import CheckedIcon from './CheckedIcon.js'
 import UncheckedIcon from './UncheckedIcon.js'
 import styles from './styles.module.css'
 
-const Checkbox = ({ className, label, checked, onChange }) => {
+const Checkbox = memo(({ className, label, checked, onChange }) => {
   const checkboxRef = useRef(null)
 
   const handleClick = event => {
@@ -17,6 +17,6 @@ const Checkbox = ({ className, label, checked, onChange }) => {
       {checked ? <CheckedIcon className={styles.icon} onClick={handleClick} /> : <UncheckedIcon className={styles.icon} onClick={handleClick} />}
     </div>
   )
-}
+})
 
 export default Checkbox
