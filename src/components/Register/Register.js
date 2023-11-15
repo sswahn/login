@@ -40,9 +40,14 @@ const Register = ({ className, onSubmit }) => {
 
   const handleResponse = response => {
     return new Promise((resolve, reject) => {
-      response.error !== undefined
-        ? reject(response.error)
-        : resolve(response.message)
+      if (!response) {
+        reject(response)
+      }
+      if (response.error !== undefined) { 
+        reject(response.error) 
+      } else {
+        resolve(response.message)
+      }
     })
   }
 
