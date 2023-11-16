@@ -9,11 +9,11 @@
 }
 
 .spinner {
-  animation: spin .8s linear infinite;
+  animation: spin .7s linear infinite;
   display: block;
   fill: #000000;
-  height: 50px;
-  margin: 16px auto;
+  height: 30px;
+  margin: 26.5px auto;
   position: static !important;
   width: 50px;
 }
