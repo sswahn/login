@@ -88,9 +88,9 @@ const CustomRegister = () => {
 In the above example, the "custom-register" class will be applied to the Register component, allowing you to override default styles.
 
 ### Additional Callbacks in Login
-- `forgotPassword`: Callback triggered when the user clicks the "Forgot password?" link. Use this to handle opening the forgot password form.
+- `forgotPassword`: Callback triggered when the user clicks the "Forgot password?" button. Use this to handle opening the forgot password form.
 
-- `registerUser`: Callback triggered when the user clicks the "Create an account" link. Use this to handle opening the registration form.
+- `registerUser`: Callback triggered when the user clicks the "Create an account" button. Use this to handle opening the registration form.
 
 ## Peer Dependencies
 Login requires React as a peer dependency. You should have React installed in your project with a version compatible with this library.  
