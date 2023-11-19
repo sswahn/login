@@ -42,7 +42,7 @@ Creates a user login form, with links to registration, and forgot password forms
 <Login
   className="custom-login"
   onSubmit={handleOnSubmit}
-  forgotPassword={handleOpenForgotPassword},
+  forgotPassword={handleOpenForgotPassword}
   registerUser={handleOpenRegistration}
 />
 ```  
