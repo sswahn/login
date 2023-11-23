@@ -3,7 +3,7 @@ import SuccessIcon from './SuccessIcon.js'
 import ErrorIcon from './ErrorIcon.js'
 import styles from './styles.module.css'
 
-const SubmitButton = memo(({ text, message, error }) => {
+const SubmitButton = memo(({ text, message, error, disabled }) => {
   return (
     <div>
       {message && (
@@ -18,7 +18,7 @@ const SubmitButton = memo(({ text, message, error }) => {
           <span>{error}</span>
         </div>
       )}
-      <button className={styles.submit} type="submit">{text}</button>
+      <button className={styles.submit} type="submit" disabled={disabled}>{text}</button>
     </div>
   )
 })
