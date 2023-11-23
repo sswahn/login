@@ -101,7 +101,7 @@ const Register = ({ className, onSubmit }) => {
         </ul>
       </details>
       {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Sign Up" message={message} error={error} />}
+      {!loading && <SubmitButton text="Sign Up" message={message} error={error} disabled={!!message} />}
     </form>
   )
 }
