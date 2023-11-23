@@ -59,7 +59,7 @@ const ForgotPassword = ({ className, onSubmit }) => {
         <UserIcon />
       </div>
       {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Reset Password" message={message} error={error} />}
+      {!loading && <SubmitButton text="Reset Password" message={message} error={error} disabled={!!message} />}
     </form>
   )
 }
