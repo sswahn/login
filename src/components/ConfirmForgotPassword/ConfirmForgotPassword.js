@@ -91,7 +91,7 @@ const ConfirmForgotPassword = ({ className, onSubmit }) => {
         <PasswordIcon />
       </div>
       {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Reset Password" message={message} error={error} />}
+      {!loading && <SubmitButton text="Reset Password" message={message} error={error} disabled={!!message} />}
     </form>
   )
 }
