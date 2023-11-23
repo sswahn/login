@@ -78,7 +78,7 @@ const Login = ({ className, onSubmit, forgotPassword, registerUser }) => {
       </div>
       <Checkbox label="Remember me" checked={checked} onChange={handleCheckbox} />
       {loading && <LoadingSpinner />}
-      {!loading && <SubmitButton text="Sign In" message={message} error={error} />}
+      {!loading && <SubmitButton text="Sign In" message={message} error={error} disabled={!!message} />}
       <div>
         <button type="button" onClick={forgotPassword} aria-label="open forgot password form">Forgot password?</button>
         <button type="button" onClick={registerUser} aria-label="open registration form">Create an account</button>
