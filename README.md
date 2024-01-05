@@ -68,7 +68,7 @@ Confirm forgot password form. Using a confirmation code users can reset their pa
 ## Documentation
 
 ### `onSubmit` Callback Hook
-- Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be a asynchronous callback function.
+- Each component (`Register`, `Login`, `ForgotPassword`, `ConfirmForgotPassword`) accepts an onSubmit prop, which should be an asynchronous callback function.
 - This function is triggered when the user submits the form, and it receives the form data as an argument.
 - You can customize this function to handle the form submission, such as making API calls, additional validation, redirects, etc.
 - `onSubmit` must be an async function and, when necessary, return one of the following objects:
